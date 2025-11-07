@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
+<title>TaxiPro — Полный гид (v1.4.5)</title>
+<link rel="icon" href="images/cov1_start.png">
+<style>
+:root{
+  --bg:#0f1013; --bg2:#181a1f; --text:#f5f7fa; --muted:#aab2bd;
+  --accent:#FFD54F; --card:#1f2229; --radius:16px;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:linear-gradient(180deg,#0f1013, #1a1c22);color:var(--text);
+  font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Inter,Arial,sans-serif;line-height:1.55}
+.container{max-width:980px;margin:0 auto;padding:24px}
+.hero{background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);border-radius:24px;
+  overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.35)}
+.hero .cover{width:100%;display:block;object-fit:cover;aspect-ratio:16/9;background:#0f1013}
+.hero .bar{background:var(--accent);color:#181a1f;padding:14px 18px;font-weight:600}
+h1{font-size:34px;margin:18px 0 6px}
+h2{font-size:24px;margin:26px 0 12px}
+p,li{color:#d9dee5}
+kbd{background:#2a2e36;border:1px solid #3a3f48;border-radius:8px;padding:2px 8px;font-weight:600}
+.card{background:var(--card);border-radius:20px;border:1px solid rgba(255,255,255,.06);padding:16px 16px;margin:12px 0}
+.grid{display:grid;grid-template-columns:1fr;gap:12px}
+@media(min-width:860px){ .grid{grid-template-columns:1fr 1fr} }
+.figure{background:#121419;border:1px solid rgba(255,255,255,.06);border-radius:16px;overflow:hidden}
+.figure img{width:100%;display:block;background:#000}
+.figcap{padding:10px 12px;color:var(--muted);font-size:14px;border-top:1px solid rgba(255,255,255,.06)}
+.badge{display:inline-block;background:#23262d;border:1px solid #343944;border-radius:999px;padding:6px 10px;margin-right:6px;color:#cdd3db;font-size:13px}
+.small{font-size:13px;color:var(--muted)}
+.footer{opacity:.7;margin:28px 0}
+.btn{display:inline-block;background:var(--accent);color:#111;padding:12px 16px;border-radius:12px;text-decoration:none;font-weight:700}
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="hero">
+      <img class="cover" src="images/cov1_start.png" alt="TaxiPro — Старт"/>
+      <div class="bar">Открой в Telegram → @taxi_profit_bot</div>
+    </div>
+    <h1>TaxiPro — полный гид <span class="small">(v1.4.5)</span></h1>
+    <p>Учёт смен, расходов и чистой прибыли прямо в Telegram. Ниже — пошагово: <b>Настройки → Ведение смены → Отчёты</b>.</p>
+
+    <h2>1) Старт с настроек: профиль и авто</h2>
+    <div class="card">
+      <div class="grid">
+        <figure class="figure"><img src="images/S1.png" alt="Настройки — общий вид"/><figcaption class="figcap">Настройки: автомобили, комиссии парка, налоги</figcaption></figure>
+        <figure class="figure"><img src="images/S2.png" alt="Добавленное авто"/><figcaption class="figcap">Авто добавлено: класс, ставка, статус «Активно»</figcaption></figure>
+      </div>
+      <ul>
+        <li><b>Автомобили</b> → название, класс (<span class="badge">Эконом</span><span class="badge">Комфорт</span><span class="badge">Комфорт+</span>), при желании — ставка ₽/сутки. Нажми <kbd>Добавить</kbd>, включи <kbd>Активно</kbd>.</li>
+        <li><b>Комиссии парка</b>: <span class="badge">Без парка</span> • <span class="badge">Фикс/сутки</span> • <span class="badge">С заказа</span> • <span class="badge">% с дохода</span>.</li>
+        <li><b>Налог</b>: <span class="badge">Без налога</span> / <span class="badge">Самозанятый 4%</span> / <span class="badge">ИП 6%</span>.</li>
+        <li><b>Демо‑режим</b> — загрузит примеры; <b>Сброс данных</b> — очистит локальные записи.</li>
+      </ul>
+    </div>
+
+    <h2>2) Ведение смены: быстрый ввод</h2>
+    <div class="card">
+      <div class="grid">
+        <figure class="figure"><img src="images/M_income.png" alt="Доход: модальное окно"/><figcaption class="figcap">Модал «Доход за день»: быстрые кнопки +2000/+5000/+10000</figcaption></figure>
+        <figure class="figure"><img src="images/M_fuel.png" alt="Топливо: модальное окно"/><figcaption class="figcap">Модал «Топливо за день»: быстрые +500/+1000/+2000</figcaption></figure>
+      </div>
+      <figure class="figure"><img src="images/M_main.png" alt="Главный экран со значениями"/><figcaption class="figcap">Главный экран: доходы/расходы/время за день</figcaption></figure>
+      <figure class="figure"><img src="images/M_summary.png" alt="Итоги и график"/><figcaption class="figcap">Итоги: комиссия парка, налог, чистая прибыль, эффективность и график</figcaption></figure>
+    </div>
+
+    <h2>3) Отчёты: неделя, месяц и диапазон</h2>
+    <div class="card">
+      <div class="grid">
+        <figure class="figure"><img src="images/R_week.png" alt="Неделя"/><figcaption class="figcap">Отчёт: неделя (последние 7 дней)</figcaption></figure>
+        <figure class="figure"><img src="images/R_month.png" alt="Месяц"/><figcaption class="figcap">Отчёт: месяц (последние 30 дней)</figcaption></figure>
+      </div>
+      <div class="grid">
+        <figure class="figure"><img src="images/R_calendar.png" alt="Календарь"/><figcaption class="figcap">Календарь: выбираем период</figcaption></figure>
+        <figure class="figure"><img src="images/R_range.png" alt="Диапазон"/><figcaption class="figcap">Отчёт: произвольный диапазон</figcaption></figure>
+      </div>
+    </div>
+
+    <h2>4) Формула «чистыми»</h2>
+    <div class="card">
+      <p><b>Чистыми = Выручка − (Выручка × Комиссия%) − Аренда − Топливо − Прочие − Налог (если выбран)</b></p>
+      <p class="small">Пример: 6 800 − 1 496 − 1 500 − 800 − 120 = <b>2 884 ₽</b> (без налога).</p>
+    </div>
+
+    <p class="footer small">© TaxiPro · Гид v1.4.5 · Открой мини‑апку → <b>@taxi_profit_bot</b></p>
+  </div>
+</body>
+</html>
